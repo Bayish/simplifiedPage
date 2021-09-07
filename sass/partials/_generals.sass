@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+
+body 
+    font-size: $titleSize
+    font-family: 'Source Sans Pro', sans-serif
+    color: $titleColor
+    font-size: 16px
+
+
+.container 
+    max-width: 1200px
+    padding: 0 15px
+    margin: 0 auto
+
+
+%links
+    ul
+        padding: 0
+        margin: 0
+        list-style: none
+        li 
+            display: inline-block
+        
+.row 
+    display: flex
+    flex-wrap: wrap  
+
+%col 
+    padding: 0 15px
+
+.col
+    +make-cols
+        @extend %col
+
+.col-sm
+    +sm
+        +make-cols
+            padding: 0 15px
+
+
+.col-md
+    +md
+        +make-cols
+            padding: 0 15px
+                
+     

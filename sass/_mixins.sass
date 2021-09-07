@@ -1,0 +1,41 @@
+=make-cols 
+    @for $i from 1 through 12
+        $width-col: $i * 100%/12
+        &-#{$i} 
+            width: $width-col
+            @content
+        
+    
+
+
+=md 
+    @media screen and (min-width:940px) 
+        @content
+    
+
+
+=sm 
+    @media screen and (min-width:576px) 
+        @content
+    
+=placeholder()
+
+    &::-webkit-input-placeholder
+
+        @content
+
+    &:-ms-input-placeholder
+
+        @content
+
+    &::-ms-input-placeholder
+
+        @content
+
+    &::-moz-placeholder
+
+        @content
+
+    &::placeholder
+
+        @content
